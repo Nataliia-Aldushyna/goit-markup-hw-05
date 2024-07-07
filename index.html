@@ -613,5 +613,72 @@
       </div>
     </footer>
     <!-- #endregion -->
+
+    <!-- #region Modal -->
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button type="button" class="modal-btn">
+          <svg class="modal-btn-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close"></use>
+          </svg>
+        </button>
+        <p class="modal-caption">
+          <strong>Leave your contacts and we will call you back</strong>
+        </p>
+        <form class="feedback-form" name="feedbackForm" action="">
+          <label class="feedback-field" for="">
+            <span class="feedback-label">Name</span>
+            <input class="feedback-input" type="text" name="userName" id="" />
+            <svg class="feedback-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-person"></use>
+            </svg>
+          </label>
+          <label class="feedback-field" for="">
+            <span class="feedback-label">Phone</span>
+            <input class="feedback-input" type="tel" name="userPhone" id="" />
+            <svg class="feedback-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+          </label>
+          <label class="feedback-field" for="">
+            <span class="feedback-label">Email</span>
+            <input class="feedback-input" type="tel" name="userEmail" id="" />
+            <svg class="feedback-icon" width="18" height="24">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+          </label>
+          <label class="feedback-field" for="">
+            <span class="feedback-label">Comment</span>
+            <input class="feedback-input" type="tel" name="userEmail" id="" />
+            <textarea
+              class="feedback-comment"
+              name="userComment"
+              rows="5"
+              placeholder="Text input"
+              id=""
+            ></textarea>
+          </label>
+          <label class="feedback-agreement" for="">
+            <input
+              class="visually-hidden"
+              type="checkbox"
+              name="userAgreement"
+              value="false"
+              id=""
+            />
+            <span class="feedback-checkbox"></span>
+            <svg class="feedback-checkbox-icon" width="10" height="8">
+              <use href="./images/icons.svg#icon-checkbox"></use>
+            </svg>
+            <span class="feedback-desc"
+              >I accept the terms and conditions of the
+              <a class="feedback-link" href="#">Privacy Policy</a></span
+            >
+          </label>
+          <button class="btn feedback-btn" type="submit">Send</button>
+        </form>
+      </div>
+    </div>
+    <!-- #endregion -->
   </body>
 </html>
