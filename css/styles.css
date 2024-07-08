@@ -513,6 +513,40 @@ footer .container {
     letter-spacing: 0.02em;
     color: var(--light-cl);
 }
+
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.newsletter-field {
+    max-width: 264px;
+    width: 100%;
+}
+
+.newsletter-input {
+    width: 100%;
+    height: 40px;
+    padding: 8px 16px;
+    color: var(--light-100);
+    background: transparent;
+    border: 1px solid var(--light-100);
+    outline: 1px solid transparent;
+    outline-offset: -1px;
+    border-radius: 4px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    transition: outline-color var(--transition);
+}
+
+.newsletter-btn {
+    padding: 8px 24px;
+    gap: 16px;
+}
+
+.btn-icon {
+    fill: currentColor;
+}
 /* #endregion */
 
 /* #region Modal */
