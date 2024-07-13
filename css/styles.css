@@ -610,7 +610,7 @@ footer .container {
     border-radius: var(--radius);
     box-shadow: var(--modal-shadow);
     opacity: 0;
-    transition: var(--transition);
+    transition: transform var(--transition);
     transition-property: transform, opacity;
     transition-delay: 0s;
 }
@@ -635,11 +635,10 @@ footer .container {
     background-color: var(--light-cl-100);
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: var(--radius-circle);
-    transition: border  var(--transition);
-    transition: background-color var(--transition);
+    transition: background-color, border var(--transition);
 }
 
-.modal-close-btn:hover, 
+.modal-close-btn:hover,
 .modal-close-btn:focus {
   background-color: var(--accent-cl-200); 
   border: none;
@@ -674,7 +673,6 @@ footer .container {
 
 .modal-form-wrapper {
   position: relative;
-  background-color: transparent;
 }
 
 .modal-form-input {
@@ -685,13 +683,14 @@ footer .container {
     line-height: 1.5;
     border-radius: var(--radius);
     border: 1px solid var(--dark-cl-200);
+    background-color: transparent;
     outline: transparent;
     transition: var(--transition);
     transition-property: border-color;
 }
 
 .modal-form-input:focus {
-  border-color: var(--accent-cl-100);
+  border-color: #4D5AE5;
 }
 
 .modal-form-icon {
@@ -706,6 +705,10 @@ footer .container {
 
 .modal-form-input:focus + .modal-form-icon {
   fill: var(--accent-cl-100);
+}
+
+.modal-user-comment {
+  margin-bottom: 16px;
 }
 
 .modal-form-comment {
@@ -728,7 +731,7 @@ footer .container {
 }
 
 .modal-form-comment:focus {
-  border-color: var( --accent-cl-100);
+  border-color: #4D5AE5;;
 }
 
 .modal-form-comment::placeholder {
@@ -758,16 +761,15 @@ footer .container {
     margin-right: 8px;
     border-radius: 2px;
     border: 1px solid var(--dark-cl-200);
-    transition: background-color var(--transition);
-    transition: border var(--transition);
+    transition: background-color, border var(--transition);
     transition-property: border-color, background-color;
     fill: transparent;
 }
 
 input[type='checkbox']:checked + .modal-form-desc > 
 .modal-form-checkbox {
-  border: none;
   background-color: var(--accent-cl-200);
+  border: none;
   fill: var(--secondary-cl);
 }
 
