@@ -589,7 +589,7 @@ footer .container {
 
 .backdrop.is-open {
     opacity: 1;
-    pointer-events: initial;
+    pointer-events: auto;
     visibility: visible;
 }
 
@@ -762,9 +762,9 @@ footer .container {
 }
 
 input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
+  background-color: var(--accent-cl-200);
   border: none;
   fill: var(--secondary-cl);
-  background-color: var(--accent-cl-200);
 }
 
 .modal-form-checkbox-icon {
