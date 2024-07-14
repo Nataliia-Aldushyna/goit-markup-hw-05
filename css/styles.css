@@ -580,27 +580,24 @@ footer .container {
     width: 100%;
     height: 100%;
     background-color: var(--dark-cl-200);
-    backdrop-filter: blur(2px);
-    transition: var(--transition);
-    visibility: var(--transition);
-    transition-property: opacity, visibility;
     opacity: 0;
+    visibility: hidden;
     pointer-events: none;
-    transition-delay: 600ms;
+    backdrop-filter: blur(2px);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
     opacity: 1;
     pointer-events: initial;
     visibility: visible;
-    transition-delay: 0s;
 }
 
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     width: 100%;
     max-width: 408px;
     min-height: 584px;
@@ -609,49 +606,39 @@ footer .container {
     background-color: var(--light-cl-200);
     border-radius: var(--radius);
     box-shadow: var(--modal-shadow);
-    opacity: 0;
-    transition: var(--transition);
-    transition-property: transform;
-}
-
-.backdrop.is-open .modal {
-    transform: translate(-50%, -50%);
-    opacity: 1;
-    transition-delay: 400ms;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn {
     position: absolute;
     top: 24px;
     right: 24px;
+    width: 24px;
+    height: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: var(--radius-circle);
+    padding: 0;
+    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 0;
-    width: 24px;
-    height: 24px;
     background-color: var(--light-cl-100);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: var(--radius-circle);
-    transition: var(--transition);
-    transition-property: background-color, border;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
+  background-color: #404bbf;
   border: none;
-  background-color: var(--accent-cl-200); 
 }
 
 .modal-btn-icon {
-  fill: var(--primary-cl);
-  transition: var(--transition); 
-  transition-property: fill;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover .modal-btn-icon,
-.modal-close-btn:focus .modal-btn-icon {
-  fill: var(--light-cl);
+.modal-close-btn:hover > .modal-btn-icon,
+.modal-close-btn:focus > .modal-btn-icon {
+  fill: #ffffff;
 } 
 
 .modal-caption {
@@ -695,7 +682,7 @@ footer .container {
 }
 
 .modal-form-input:focus {
-  border-color: var(--accent-cl-100);
+  border-color: #4D5AE5;
 }
 
 .modal-form-icon {
@@ -709,7 +696,7 @@ footer .container {
 }
 
 .modal-form-input:focus + .modal-form-icon {
-  fill: var(--accent-cl-100);
+  fill:  #4D5AE5;
 }
 
 .modal-user-comment {
@@ -736,7 +723,7 @@ footer .container {
 }
 
 .modal-form-comment:focus {
-  border-color: var(--accent-cl-100);
+  border-color: #4D5AE5;
 }
 
 .modal-form-comment::placeholder {
@@ -766,15 +753,14 @@ footer .container {
     margin-right: 8px;
     border-radius: 2px;
     border: 1px solid var(--dark-cl-200);
-    transition: var(--transition);
-    transition-property: background-color, border;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     fill: transparent;
 }
 
-input[type='checkbox']:checked + .modal-form-desc > .modal-form-checkbox {
+input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
+  background-color: var(--accent-cl-200);
   border: none;
   fill: var(--secondary-cl);
-  background-color: var(--accent-cl-200);
 }
 
 .modal-form-checkbox-icon {
