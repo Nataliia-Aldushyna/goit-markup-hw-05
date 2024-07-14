@@ -589,7 +589,7 @@ footer .container {
 
 .backdrop.is-open {
     opacity: 1;
-    pointer-events: auto;
+    pointer-events: initial;
     visibility: visible;
 }
 
