@@ -700,11 +700,15 @@ footer .container {
 }
 
 .modal-form-input:focus + .modal-form-icon {
-  fill:  #4D5AE5;
+  fill:  #4d5ae5;
 }
 
 .modal-user-comment {
   margin-bottom: 16px;
+}
+
+.modal-form-comment:focus {
+  border-color: #4d5ae5;
 }
 
 .modal-form-comment {
@@ -724,10 +728,6 @@ footer .container {
   resize: none;
   transition: var(--transition);
   transition-property: border-color;
-}
-
-.modal-form-comment:focus {
-  border-color: #4d5ae5;
 }
 
 .modal-form-comment::placeholder {
