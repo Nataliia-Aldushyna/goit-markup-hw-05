@@ -629,7 +629,11 @@ footer .container {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-close-btn:hover,
+.modal-close-btn:hover {
+  border: none;
+  background-color: #404bbf;
+}
+
 .modal-close-btn:focus {
   border: none;
   background-color: #404bbf;
