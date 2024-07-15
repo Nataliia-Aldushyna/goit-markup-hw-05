@@ -763,16 +763,10 @@ footer .container {
     fill: transparent;
 }
 
-/* input[type="checkbox"]:checked + .modal-form-desc > .modal-form-checkbox {
-  background-color: var(--accent-cl-200);
-  border: none;
-  fill: var(--secondary-cl);
-} */
-
 .modal-agreement-input:checked + .modal-form-desc > .modal-form-checkbox {
-    background-color: var(--accent-cl-200);
+    background-color: #404bbf;
     border: none;
-    fill: var(--secondary-cl);
+    fill: #ffffff;
 }
 
 .modal-form-checkbox-icon {
